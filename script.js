@@ -14,14 +14,26 @@ function addItem() {
     }
 
     inputBox.value = ''; // empty the input box after adding  
+    saveList();
 }
 
 listContainer.addEventListener('click', function(e) {
     if(e.target.tagName === 'LI'){
         e.target.classList.toggle('checked');
-
+        saveList();
     }
     else if(e.target.tagName === 'SPAN'){
         e.target.parentElement.remove();
+        saveList();
     }
 }, false);
+
+function saveList() {
+    localStorage.setItem('groceryList', listContainer.innerHTML);
+
+}
+
+function loadList() {
+    listContainer.innerHTML = localStorage.getItem('groceryList') || '';  // load saved list or empty string
+}
+loadList(); 
