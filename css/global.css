@@ -74,6 +74,9 @@ ul li {
   user-select: none;
   cursor: pointer;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 ul li::before {
@@ -97,21 +100,42 @@ ul li.checked::before {
   color: #27ae60;
 }
 
-ul li span {
-  position: absolute;
-  right: 0px;
-  top: 15px;
-  text-align: center;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-  color: grey;
-  line-height: 20px;
+.item-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  cursor: pointer;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  color: #3498db;
+}
+
+.edit-btn:hover {
+  background-color: #ebf5fb;
+  color: #2980b9;
+}
+
+.delete-btn {
+  color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background-color: #fdedec;
+  color: #c0392b;
 }
 
 ul li span:hover {
-  color: pink;
   cursor: pointer;
-  background-color: lightgrey;
   border-radius: 40%;
 }

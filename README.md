@@ -1,2 +1,2 @@
 # grocery
-A simple grocery list app in JavaScript . 
+A simple grocery list app in JavaScript 
