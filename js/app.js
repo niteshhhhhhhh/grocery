@@ -1,5 +1,8 @@
 const inputBox = document.getElementById('grocery-input');  
 const listContainer = document.getElementById('list-container');
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', addItem);
+
 
 function addItem() {
     if(inputBox.value === '') {

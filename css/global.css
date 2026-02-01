@@ -46,15 +46,14 @@
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 20px;
-  
 }
-input{
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
-    font-size: 16px;
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
 }
 button {
   background: #27ae60;
@@ -63,10 +62,10 @@ button {
   outline: none;
   padding: 16px 10px;
   border-radius: 30px;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 16px;
   transition: background 0.3s ease;
-}   
+}
 
 ul li {
   list-style: none;
@@ -78,33 +77,30 @@ ul li {
 }
 
 ul li::before {
-  content: " ";
+  content: "◯";
   position: absolute;
   height: 20px;
   width: 20px;
-  border-radius: 50%;
-  background-image: url(/images/unchecked.png);
-    background-size: cover;
-    top: 12px;
-    left: -12px;
+  top: 12px;
+  left: -12px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 ul li.checked {
   color: #95a5a6;
   text-decoration: line-through;
-
 }
 
 ul li.checked::before {
-  background-image: url(/images/checked.png);
-  background-size: cover;
+  content: "✓";
+  color: #27ae60;
 }
-
 
 ul li span {
   position: absolute;
-  right: 0px; 
-  top : 15px;
+  right: 0px;
+  top: 15px;
   text-align: center;
   width: 20px;
   height: 20px;
